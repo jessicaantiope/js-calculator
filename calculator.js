@@ -20,7 +20,7 @@ function initialize () {
         clearButtons[i].addEventListener("click", clearFunction);
     }
 
-    document.getElementById("equals").addEventListener("click", readFormula);
+    document.getElementById("equals").addEventListener("click", calculateResult);
 }
 
 function numberFunction (e) { 
@@ -36,17 +36,21 @@ function clearFunction (e) {
 
 }
 function calculateResult (e) {
-
+    var result = readFormula(document.getElementById("answer").value)
+    document.getElementById("answer").value = result;
 }
 
 function readFormula (formula) {
-    readFormula = document.getElementById("answer").value.split(/(\+|-|\/|x)/);
-    var result = 0
-    
-    console.log(readFormula,"cheesecake");
-debugger
-    // "9+6"
-    // 
+    splitFormula = formula.split(/(\+|-|\/|x)/);
+    if (splitFormula[1] === "+") {
+        return parseFloat(splitFormula[0]) + parseFloat(splitFormula[2]);
+    } else if (splitFormula[1] === "-") {
+        return splitFormula[0] - splitFormula[2];
+    } else if (splitFormula[1] === "/") {
+        return splitFormula[0] / splitFormula[2];
+    } else if (splitFormula[1] === "x") {
+        return splitFormula[0] * splitFormula[2];
+    }
 }
 
 
