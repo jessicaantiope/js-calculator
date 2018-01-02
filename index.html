@@ -3,38 +3,60 @@
     <head>
         <title>Calculator</title>
         
-        <a href="main.css"></a>
-        <a href="calculator.js"></a>
+        <link rel"stylesheet" type="text/css" src="main.css" />
+        <script src="calculator.js"></script>
+    
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <button type="button" value="AC">AC</button>
-                <button type="button" value="CE">CE</button>
-                <button type="button" value="/">/</button>
-                <button type="button" value="x">x</button>
+                <div type="text" value="ELECTRONIC CALCULATOR">ELECTRONIC CALCULATOR</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <input type="text" disabled="disabled" id="answer"/>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <button type="button" class="clearButton" value="AC">AC</button>
+                <button type="button" class="clearButton" value="CE">CE</button>
+                <button type="button" class="symbol" value="/">/</button>
+                <button type="button" class="symbol" value="x">x</button>
             </div>
             
             <div class="row">
-                <button type="button" value="7">7</button>
-                <button type="button" value="8">8</button>
-                <button type="button" value="9">9</button>
-                <button type="button" value="-">-</button>
+                <button type="button" class="number" value="7">7</button>
+                <button type="button" class="number" value="8">8</button>
+                <button type="button" class="number" value="9">9</button>
+                <button type="button" class="symbol" value="-">-</button>
             </div>
 
             <div class="row">
-                <button type="button" value="4">4</button>
-                <button type="button" value="5">5</button>
-                <button type="button" value="6">6</button>
-                <button type="button" value="+">+</button>
+                <button type="button" class="number" value="4">4</button>
+                <button type="button" class="number" value="5">5</button>
+                <button type="button" class="number" value="6">6</button>
+                <button type="button" class="symbol" value="+">+</button>
             </div>
 
             <div class="row">
-                <button type="button" value="1">1</button>
-                <button type="button" value="2">2</button>
-                <button type="button" value="3">3</button>
-                <button type="button" value="=">=</button>
+                <button type="button" class="number" value="1">1</button>
+                <button type="button" class="number" value="2">2</button>
+                <button type="button" class="number" value="3">3</button>
+                <button type="button" id="equals" value="=">=</button>
             </div>
+            
+            <div class="row">
+                <button type="button" class="symbol" value="0">0</button>
+                <button type="button" class="symbol" value=".">.</button>
+                
+            </div>
+         <!--still to do 
+         0 and = to be merged into two squares-->
+
+            
+    
         </div>
     </body>
 </html>
